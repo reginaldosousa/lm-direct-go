@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/hex"
 	"errors"
-	"lm-direct-go/messages"
+	"lm-direct/messages"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

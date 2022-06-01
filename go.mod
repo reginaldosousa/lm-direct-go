@@ -1,4 +1,4 @@
-module lm-direct-go
+module lm-direct
 
 go 1.18
 
