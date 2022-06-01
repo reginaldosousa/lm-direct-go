@@ -1,4 +1,4 @@
-module lm-direct-go
+module github.com/reginaldosousa/lm-direct-go
 
 go 1.18
 

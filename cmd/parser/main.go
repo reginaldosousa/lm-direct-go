@@ -5,9 +5,10 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"lm-direct-go/messages"
 	"log"
 	"os"
+
+	"github.com/reginaldosousa/lm-direct-go/messages"
 )
 
 func main() {

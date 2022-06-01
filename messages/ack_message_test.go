@@ -4,8 +4,9 @@ import (
 	"bytes"
 	"encoding/hex"
 	"errors"
-	"lm-direct-go/messages"
 	"testing"
+
+	"github.com/reginaldosousa/lm-direct-go/messages"
 
 	"github.com/stretchr/testify/assert"
 )

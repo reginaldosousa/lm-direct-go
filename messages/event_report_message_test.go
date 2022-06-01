@@ -3,9 +3,10 @@ package messages_test
 import (
 	"bytes"
 	"encoding/hex"
-	"lm-direct-go/messages"
 	"testing"
 	"time"
+
+	"github.com/reginaldosousa/lm-direct-go/messages"
 
 	"github.com/stretchr/testify/assert"
 )
