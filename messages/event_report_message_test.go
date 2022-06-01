@@ -3,7 +3,7 @@ package messages_test
 import (
 	"bytes"
 	"encoding/hex"
-	"lm-direct/messages"
+	"lm-direct-go/messages"
 	"testing"
 	"time"
 

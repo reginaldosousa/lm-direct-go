@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"lm-direct/messages"
+	"lm-direct-go/messages"
 	"log"
 	"os"
 )
