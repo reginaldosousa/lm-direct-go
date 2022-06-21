@@ -42,7 +42,7 @@ var eventReportTCs = []struct {
 				Connected:         true,
 				VoiceCallIsActive: false,
 				Roaming:           false,
-				NetworkTechnology: "",
+				NetworkTechnology: messages.NetworkTechnology2G,
 			},
 			Inputs: [8]bool{
 				true,
@@ -99,7 +99,7 @@ var eventReportTCs = []struct {
 				Connected:         true,
 				VoiceCallIsActive: false,
 				Roaming:           false,
-				NetworkTechnology: "",
+				NetworkTechnology: messages.NetworkTechnology2G,
 			},
 			Inputs: [8]bool{
 				true,

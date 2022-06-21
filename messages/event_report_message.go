@@ -3,6 +3,7 @@ package messages
 import (
 	"bytes"
 	"encoding/binary"
+	"fmt"
 	"time"
 )
 
@@ -46,6 +47,13 @@ const (
 	NetworkTechnology4G       NetworkTechnology = "4G Network (LTE)"
 	NetworkTechnologyReserved NetworkTechnology = "Reserved"
 )
+
+var NetworkTechnologyMap = map[string]NetworkTechnology{
+	"00": NetworkTechnology2G,
+	"01": NetworkTechnology3G,
+	"10": NetworkTechnology4G,
+	"11": NetworkTechnologyReserved,
+}
 
 type UnitStatus struct {
 	HTTPOTAUpdate       bool
@@ -122,7 +130,10 @@ func ParseEventReportMessageBody(buf *bytes.Buffer) (body EventReportMessageBody
 	body.CommState.Connected = (commState>>3)&1 == 1
 	body.CommState.VoiceCallIsActive = (commState>>4)&1 == 1
 	body.CommState.Roaming = (commState>>5)&1 == 1
-	// msg.CommState.NetworkTechnology = (commState>>6)&1, (commState>>7)&1)
+
+	networkTechnology := fmt.Sprint((commState>>6)&1) + fmt.Sprint((commState>>7)&1)
+
+	body.CommState.NetworkTechnology = NetworkTechnologyMap[networkTechnology]
 
 	body.HDOP, err = buf.ReadByte()
 	if err != nil {
